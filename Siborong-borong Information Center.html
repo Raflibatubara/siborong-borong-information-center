@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Siborong-borong Information Center</title>
+<meta name="description" content="Portal informasi digital Siborong-borong, Tapanuli Utara, Sumatera Utara: wisata, kuliner, budaya, layanan, dan peta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f9f7;--card:#fff;--tx:#17302a;--mu:#5d7770;--pr:#1f7a5a;--ac:#2b7bb9;--bd:#dbe6e1;--warn:#fff4d6;--warnt:#7a5a00;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1a17;--card:#16262f;--tx:#e6f1ed;--mu:#9bb5ad;--pr:#4fc79a;--ac:#6bb4e6;--bd:#26413b;--warn:#3a3114;--warnt:#f0d27a}}
+:root[data-theme=dark]{--bg:#0e1a17;--card:#16262f;--tx:#e6f1ed;--mu:#9bb5ad;--pr:#4fc79a;--ac:#6bb4e6;--bd:#26413b;--warn:#3a3114;--warnt:#f0d27a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.6}
+a{color:var(--ac)}h1,h2,h3{line-height:1.2;margin:0 0 .5rem}
+.w{max-width:1120px;margin:auto;padding:0 1rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;gap:.75rem;min-height:56px}
+.logo{font-weight:800;color:var(--pr);text-decoration:none;white-space:nowrap}
+nav{display:flex;gap:.25rem;overflow-x:auto;flex:1;scrollbar-width:none}
+nav a{padding:.4rem .65rem;border-radius:8px;color:var(--tx);text-decoration:none;font-size:.9rem;white-space:nowrap}
+nav a:hover,nav a.on{background:var(--pr);color:#fff}
+button,.btn{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;padding:.45rem .8rem;text-decoration:none;display:inline-block}
+.btn.p{background:var(--pr);color:#fff;border-color:var(--pr);font-weight:600}
+button:hover,.btn:hover{transform:translateY(-1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.hero{background:linear-gradient(135deg,#1f7a5a,#2b7bb9);color:#fff;padding:4rem 0;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:60px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.12) 0 12px,transparent 12px 24px)}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800}.hero p{max-width:600px;opacity:.95}
+.sb{display:flex;gap:.5rem;margin:1.2rem 0;flex-wrap:wrap}
+.sb input,.f input,.f select{flex:1;min-width:200px;padding:.7rem 1rem;border-radius:10px;border:1px solid var(--bd);font:inherit;background:var(--card);color:var(--tx)}
+section.s{padding:2rem 0}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:14px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
+.c:hover{box-shadow:0 8px 24px rgba(0,0,0,.12);transform:translateY(-3px)}
+.im{height:110px;display:grid;place-items:center;font-size:2.2rem;background:linear-gradient(135deg,var(--h1),var(--h2))}
+.cb{padding:1rem;flex:1;display:flex;flex-direction:column;gap:.4rem}.cb p{margin:0;color:var(--mu);font-size:.92rem}
+.tag{font-size:.75rem;background:var(--warn);color:var(--warnt);padding:.1rem .5rem;border-radius:99px;align-self:flex-start}
+.cat{text-decoration:none;color:var(--tx);padding:1rem;text-align:center}.cat span{font-size:1.8rem;display:block}
+.bc{font-size:.85rem;color:var(--mu);padding:1rem 0}.bc a{color:var(--mu)}
+.note{background:var(--warn);color:var(--warnt);padding:.7rem 1rem;border-radius:10px;font-size:.9rem;margin:1rem 0}
+.f{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto;padding-top:.5rem}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:1rem 0}.gal div{height:100px;border-radius:10px;display:grid;place-items:center;color:#fff;font-size:.8rem;text-align:center}
+.map{width:100%;border:1px solid var(--bd);border-radius:14px;background:var(--card)}
+.map a circle{cursor:pointer}.map a:hover circle{r:11}
+footer{background:var(--card);border-top:1px solid var(--bd);padding:2rem 0;margin-top:2rem;color:var(--mu);font-size:.9rem}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+#top{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));display:none;z-index:30}
+#ld{position:fixed;top:0;left:0;height:3px;width:0;background:var(--pr);z-index:50;transition:width .3s}
+.e404{text-align:center;padding:4rem 0}.e404 h1{font-size:5rem;color:var(--pr)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:700px){.nav{flex-wrap:wrap;padding:.4rem 0}nav{order:3;flex-basis:100%}}
+</style>
+</head>
+<body>
+<div id="ld"></div>
+<header><div class="w nav">
+<a class="logo" href="#/">⛰ Siborong-borong</a>
+<nav id="nav" aria-label="Navigasi utama"></nav>
+<a class="btn p" href="#/cari">Cari Informasi</a>
+<button id="th" aria-label="Ganti mode terang/gelap">🌓</button>
+</div></header>
+<div id="hero"></div>
+<main id="app" class="w" tabindex="-1"></main>
+<footer><div class="w fg">
+<div><b>Siborong-borong Information Center</b><p>Portal informasi digital kecamatan Siborong-borong, Kabupaten Tapanuli Utara, Sumatera Utara.</p></div>
+<div><b>Jelajahi</b><p id="fl"></p></div>
+<div><b>Catatan data</b><p>Data bertanda "Contoh" adalah dummy dan belum diverifikasi. Cek sumber resmi sebelum bepergian.</p></div>
+<div><b>Sumber</b><p><a href="https://www.openstreetmap.org/search?query=Siborong-borong" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="https://www.google.com/maps/search/Siborong-borong" target="_blank" rel="noopener">Google Maps</a> · <a href="https://id.wikipedia.org/wiki/Siborong-borong,_Tapanuli_Utara" target="_blank" rel="noopener">Wikipedia</a></p></div>
+</div></footer>
+<button id="top" aria-label="Kembali ke atas">↑</button>
+<script>
+const CATS={wisata:["Wisata","🏞","#1f7a5a","#2b7bb9"],kuliner:["Kuliner","🍲","#b5651d","#e0a040"],penginapan:["Penginapan","🏨","#2b7bb9","#5aa0d0"],transportasi:["Transportasi","🚌","#4a6572","#7a99a8"],pendidikan:["Pendidikan","🎓","#6a4fb0","#9a84d6"],kesehatan:["Kesehatan","🏥","#c0392b","#e57368"],layanan:["Pemerintahan & Layanan","🏛","#37474f","#78909c"],umkm:["UMKM","🛍","#2e8b57","#7bc99a"],budaya:["Budaya","🎶","#8e3b46","#c46a74"],berita:["Berita & Event","📰","#1f6f8b","#4fa3c0"]};
+const NAV=[["","Home"],["tentang","Tentang"],["wisata","Wisata"],["kuliner","Kuliner"],["penginapan","Penginapan"],["transportasi","Transportasi"],["pendidikan","Pendidikan"],["kesehatan","Kesehatan"],["budaya","Budaya"],["umkm","UMKM"],["berita","Berita & Event"],["peta","Peta"]];
+const D="Informasi belum tersedia";
+const I=[
+{id:"w1",c:"wisata",n:"Contoh: Panorama Dataran Tinggi",d:"Pemandangan perbukitan dan lahan pertanian khas dataran tinggi Tapanuli Utara. Data contoh.",l:"Sekitar Siborong-borong",j:D,h:D,f:"Belum tersedia",x:300,y:210},
+{id:"w2",c:"wisata",n:"Contoh: Taman Keluarga",d:"Ruang terbuka untuk bersantai bersama keluarga. Data contoh.",l:"Pusat kecamatan (perkiraan)",j:D,h:D,f:"Belum tersedia",x:380,y:260},
+{id:"w3",c:"wisata",n:"Contoh: Situs Sejarah Lokal",d:"Tempat penanda sejarah setempat. Nama dan lokasi nyata perlu diverifikasi.",l:D,j:D,h:D,f:"Belum tersedia",x:240,y:300},
+{id:"k1",c:"kuliner",n:"Arsik",d:"Hidangan ikan mas bumbu andaliman khas Batak. Tempat menikmatinya: belum diverifikasi.",l:D,j:"Kisaran harga: belum tersedia",h:D,f:"-",x:420,y:180},
+{id:"k2",c:"kuliner",n:"Mi Gomak",d:"Mi lidi dengan bumbu andaliman, khas Batak. Lokasi penjual perlu diverifikasi.",l:D,j:D,h:D,f:"-",x:200,y:240},
+{id:"k3",c:"kuliner",n:"Contoh: Rumah Makan Batak",d:"Rumah makan dummy untuk demonstrasi tampilan.",l:"Jalan lintas (perkiraan)",j:D,h:D,f:"-",x:330,y:320},
+{id:"p1",c:"penginapan",n:"Contoh: Hotel Dekat Bandara",d:"Penginapan dummy. Data nyata belum diverifikasi.",l:"Dekat Bandara Silangit (perkiraan)",j:D,h:D,f:"Belum tersedia",x:470,y:120},
+{id:"p2",c:"penginapan",n:"Contoh: Homestay Keluarga",d:"Homestay dummy untuk demonstrasi.",l:D,j:D,h:D,f:"Belum tersedia",x:260,y:150},
+{id:"t1",c:"transportasi",n:"Bandara Sisingamangaraja XII (Silangit)",d:"Bandara terdekat, berada di wilayah Siborong-borong dan sekitarnya. Cek rute dan jadwal penerbangan di situs maskapai.",l:"Silangit, Siborong-borong",j:"Tarif: tergantung maskapai",h:"Sesuai jadwal penerbangan",f:"-",x:470,y:100},
+{id:"t2",c:"transportasi",n:"Jalur Lintas Sumatera (Medan–Tarutung–Sibolga)",d:"Siborong-borong dilalui jalur darat antar kota. Estimasi jarak dan waktu: belum diverifikasi.",l:"Jalur darat",j:D,h:D,f:"-",x:350,y:230},
+{id:"e1",c:"pendidikan",n:"Contoh: SD Negeri",d:"Data sekolah dasar dummy.",l:D,j:"Kontak: belum tersedia",h:D,f:"-",x:210,y:180},
+{id:"e2",c:"pendidikan",n:"Contoh: SMA/SMK",d:"Data sekolah menengah dummy.",l:D,j:"Kontak: belum tersedia",h:D,f:"-",x:400,y:300},
+{id:"s1",c:"kesehatan",n:"Contoh: Puskesmas Siborong-borong",d:"Nama dan alamat perlu diverifikasi melalui Dinas Kesehatan setempat.",l:D,j:"Kontak: belum tersedia",h:D,f:"-",x:320,y:270},
+{id:"s2",c:"kesehatan",n:"Contoh: Apotek",d:"Apotek dummy untuk demonstrasi.",l:D,j:D,h:D,f:"-",x:430,y:230},
+{id:"g1",c:"layanan",n:"Kantor Camat Siborong-borong",d:"Layanan administrasi tingkat kecamatan. Alamat dan jam layanan perlu diverifikasi.",l:D,j:"Kontak: belum tersedia",h:D,f:"-",x:340,y:200},
+{id:"g2",c:"layanan",n:"Contoh: Kantor Polisi Sektor",d:"Data dummy. Gunakan 110 untuk keadaan darurat polisi dan 112 untuk darurat umum.",l:D,j:D,h:D,f:"-",x:290,y:240},
+{id:"u1",c:"umkm",n:"Pasar Tradisional",d:"Pasar tempat warga berbelanja kebutuhan harian dan hasil bumi. Hari pasar dan lokasi: belum diverifikasi.",l:D,j:D,h:D,f:"-",x:360,y:290},
+{id:"u2",c:"umkm",n:"Contoh: Kerajinan Ulos Lokal",d:"Produk dummy untuk demonstrasi.",l:D,j:D,h:D,f:"-",x:250,y:340},
+{id:"b1",c:"budaya",n:"Tor-tor",d:"Tarian tradisional Batak yang diiringi gondang. Biasa tampil pada acara adat.",l:"Wilayah Batak",j:"-",h:"-",f:"-",x:0,y:0},
+{id:"b2",c:"budaya",n:"Ulos",d:"Kain tenun tradisional Batak yang melambangkan kasih sayang dan penghormatan dalam adat.",l:"Wilayah Batak",j:"-",h:"-",f:"-",x:0,y:0},
+{id:"b3",c:"budaya",n:"Dalihan Na Tolu",d:"Sistem kekerabatan Batak yang mengatur hubungan antar keluarga dalam adat.",l:"Wilayah Batak",j:"-",h:"-",f:"-",x:0,y:0},
+{id:"n1",c:"berita",n:"Contoh: Festival Budaya Lokal",d:"Event dummy. Tanggal, lokasi, dan penyelenggara belum tersedia.",l:D,j:"Tanggal: belum tersedia",h:D,f:"-",x:0,y:0},
+{id:"n2",c:"berita",n:"Contoh: Gotong Royong Warga",d:"Kegiatan dummy untuk demonstrasi tampilan berita.",l:D,j:"Tanggal: belum tersedia",h:D,f:"-",x:0,y:0}
+];
+const $=s=>document.querySelector(s),app=$("#app");
+let fav=[];try{fav=JSON.parse(localStorage.getItem("sb-fav")||"[]")}catch(e){}
+const saveFav=()=>{try{localStorage.setItem("sb-fav",JSON.stringify(fav))}catch(e){}};
+const gm=q=>"https://www.google.com/maps/search/"+encodeURIComponent(q+" Siborong-borong Tapanuli Utara");
+const isEx=i=>/^Contoh/.test(i.n)||i.l===D;
+function card(i){const k=CATS[i.c];return `<article class="c"><div class="im" style="--h1:${k[2]};--h2:${k[3]}" aria-hidden="true">${k[1]}</div><div class="cb"><h3><a href="#/detail/${i.id}" style="color:inherit;text-decoration:none">${i.n}</a></h3>${isEx(i)?'<span class="tag">Contoh / belum diverifikasi</span>':''}<p>${i.d}</p><div class="row"><a class="btn" href="#/detail/${i.id}">Detail</a><button data-fav="${i.id}" aria-pressed="${fav.includes(i.id)}">${fav.includes(i.id)?"★ Favorit":"☆ Simpan"}</button></div></div></article>`}
+function grid(a){return a.length?`<div class="g">${a.map(card).join("")}</div>`:`<div class="note">Data tidak ditemukan. Coba kata kunci lain atau pilih kategori berbeda.</div>`}
+const bc=(...p)=>`<nav class="bc" aria-label="Breadcrumb"><a href="#/">Home</a>${p.map(x=>` / ${x}`).join("")}</nav>`;
+const catBtns=()=>Object.entries(CATS).filter(([k])=>k!="layanan"||1).map(([k,v])=>`<a class="c cat" href="#/${k=="layanan"?"layanan":k}"><span>${v[1]}</span>${v[0]}</a>`).join("");
+function home(){const pop=I.filter(i=>i.c=="wisata").slice(0,3),ku=I.filter(i=>i.c=="kuliner").slice(0,3),ev=I.filter(i=>i.c=="berita");
+$("#hero").innerHTML=`<div class="hero"><div class="w"><h1>Jelajahi Siborong-borong</h1><p>Temukan informasi, tempat menarik, kuliner, budaya, layanan, dan berbagai hal tentang Siborong-borong.</p><form class="sb" role="search" id="hs"><input id="hq" type="search" placeholder="Cari wisata, kuliner, layanan…" aria-label="Cari informasi"><a class="btn p" href="#/wisata" style="background:#fff;color:#1f7a5a">Jelajahi Sekarang</a></form></div></div>`;
+app.innerHTML=`
+<section class="s"><h2>Kategori Informasi</h2><div class="g" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">${catBtns()}</div></section>
+<section class="s"><h2>Destinasi Populer</h2>${grid(pop)}</section>
+<section class="s"><h2>Kuliner Khas</h2>${grid(ku)}</section>
+<section class="s"><h2>Berita & Event</h2>${grid(ev)}</section>`;
+const f=$("#hs");f.onsubmit=e=>{e.preventDefault();location.hash="#/cari?q="+encodeURIComponent($("#hq").value)}}
+function list(k){const v=CATS[k];app.innerHTML=`${bc(v[0])}<h1>${v[1]} ${v[0]}</h1><div class="note">Sebagian data adalah contoh dan belum diverifikasi.</div>${grid(I.filter(i=>i.c==k))}`}
+function detail(id){const i=I.find(x=>x.id==id);if(!i)return nf();const v=CATS[i.c];
+app.innerHTML=`${bc(`<a href="#/${i.c}">${v[0]}</a>`,i.n)}<h1>${i.n}</h1>${isEx(i)?'<div class="note">Data contoh / belum diverifikasi. Jangan dijadikan rujukan resmi.</div>':''}<p>${i.d}</p>
+<ul><li><b>Lokasi:</b> ${i.l}</li><li><b>Info:</b> ${i.j}</li><li><b>Jam:</b> ${i.h}</li><li><b>Fasilitas:</b> ${i.f}</li></ul>
+<div class="gal" aria-label="Galeri foto (placeholder)">${[1,2,3].map(n=>`<div style="background:linear-gradient(135deg,${v[2]},${v[3]})">Foto ${n}<br>belum tersedia</div>`).join("")}</div>
+<div class="row"><a class="btn p" href="${gm(i.n.replace("Contoh: ",""))}" target="_blank" rel="noopener">Lihat di Google Maps</a><button data-fav="${i.id}" aria-pressed="${fav.includes(i.id)}">${fav.includes(i.id)?"★ Favorit":"☆ Simpan"}</button><a class="btn" href="#/${i.c}">← Kembali</a></div>`}
+function about(){app.innerHTML=`${bc("Tentang")}<h1>Tentang Siborong-borong</h1>
+<p>Siborong-borong adalah sebuah kecamatan di Kabupaten Tapanuli Utara, Provinsi Sumatera Utara. Wilayahnya dikenal sebagai dataran tinggi di jalur lintas antar kota dan dekat Bandara Sisingamangaraja XII (Silangit).</p>
+<div class="g">${[["Sejarah","Informasi belum tersedia"],["Letak geografis","Tapanuli Utara, Sumatera Utara (koordinat resmi: belum diverifikasi)"],["Kondisi wilayah","Dataran tinggi; detail iklim dan ketinggian belum diverifikasi"],["Desa/kelurahan","Informasi belum tersedia"],["Demografi","Informasi belum tersedia (rujuk BPS Tapanuli Utara)"],["Potensi daerah","Pertanian, perdagangan, dan akses transportasi udara (perlu data pendukung)"]].map(a=>`<article class="c"><div class="cb"><h3>${a[0]}</h3><p>${a[1]}</p></div></article>`).join("")}</div>
+<p style="margin-top:1rem">Sumber umum: <a href="https://id.wikipedia.org/wiki/Siborong-borong,_Tapanuli_Utara" target="_blank" rel="noopener">Wikipedia</a>. Pemerintahan & layanan publik: <a href="#/layanan">lihat daftar</a>.</p>`}
+function search(q){const t=q.toLowerCase();let c=($("#sc")||{}).value||"";
+app.innerHTML=`${bc("Cari")}<h1>Cari Informasi</h1><div class="f"><input id="sq" type="search" aria-label="Kata kunci" placeholder="Ketik kata kunci…"><select id="sc" aria-label="Kategori"><option value="">Semua kategori</option>${Object.entries(CATS).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join("")}</select></div><div id="sr"></div>${fav.length?`<h2>Favorit Anda</h2>${grid(I.filter(i=>fav.includes(i.id)))}`:""}`;
+$("#sq").value=q;const run=()=>{const a=$("#sq").value.toLowerCase(),b=$("#sc").value;$("#sr").innerHTML=grid(I.filter(i=>(!b||i.c==b)&&(i.n+i.d+CATS[i.c][0]).toLowerCase().includes(a)))};$("#sq").oninput=run;$("#sc").onchange=run;run()}
+function mapPage(){const pts=I.filter(i=>i.x);
+app.innerHTML=`${bc("Peta")}<h1>Peta Siborong-borong</h1><div class="note">Peta skematis (posisi marker hanya perkiraan dan belum diverifikasi). Untuk peta akurat, buka OpenStreetMap atau Google Maps.</div><div class="f"><input id="mq" type="search" placeholder="Cari lokasi…" aria-label="Cari lokasi"><select id="mc" aria-label="Kategori">${`<option value="">Semua</option>`+Object.entries(CATS).filter(([k])=>pts.some(p=>p.c==k)).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join("")}</select><a class="btn p" href="https://www.openstreetmap.org/search?query=Siborong-borong" target="_blank" rel="noopener">Buka OpenStreetMap</a></div><svg class="map" viewBox="0 0 600 420" role="img" aria-label="Peta skematis" id="mp"></svg><div id="ml"></div>`;
+const run=()=>{const a=$("#mq").value.toLowerCase(),b=$("#mc").value,r=pts.filter(i=>(!b||i.c==b)&&i.n.toLowerCase().includes(a));
+$("#mp").innerHTML=`<rect width="600" height="420" fill="#cfe8dc" opacity=".4"/><path d="M0 330 Q150 250 300 230 T600 130" stroke="#8aa" stroke-width="5" fill="none" stroke-dasharray="10 6"/><text x="14" y="26" fill="currentColor" font-size="13">Utara ↑ · garis putus = jalur lintas (ilustrasi)</text>`+r.map(i=>`<a href="#/detail/${i.id}"><title>${i.n}</title><circle cx="${i.x}" cy="${i.y}" r="9" fill="${CATS[i.c][2]}" stroke="#fff" stroke-width="2"/></a>`).join("");
+$("#ml").innerHTML=r.length?`<div class="g" style="margin-top:1rem">${r.map(i=>`<a class="c cat" href="#/detail/${i.id}">${CATS[i.c][1]} ${i.n}</a>`).join("")}</div>`:`<div class="note">Lokasi tidak ditemukan.</div>`};
+$("#mq").oninput=run;$("#mc").onchange=run;run()}
+function nf(){app.innerHTML=`<div class="e404"><h1>404</h1><p>Halaman tidak ditemukan. Mungkin alamatnya salah atau sudah dipindahkan.</p><a class="btn p" href="#/">Kembali ke Home</a></div>`}
+function route(){const l=$("#ld");l.style.width="70%";
+const h=location.hash.slice(2),[p,q=""]=h.split("?"),[a,b]=p.split("/");
+$("#hero").innerHTML="";
+try{
+if(!a)home();else if(a=="tentang")about();else if(a=="detail")detail(b);else if(a=="peta")mapPage();else if(a=="cari")search(decodeURIComponent((q.match(/q=([^&]*)/)||[,""])[1]));
+else if(CATS[a])list(a);else nf()}catch(e){nf()}
+document.querySelectorAll("nav#nav a").forEach(x=>x.classList.toggle("on",x.getAttribute("href")=="#/"+(a=="detail"?"":a)));
+document.title=(a?(CATS[a]?CATS[a][0]:a)+" – ":"")+"Siborong-borong Information Center";
+scrollTo(0,0);setTimeout(()=>{l.style.width="100%";setTimeout(()=>l.style.width="0",300)},100)}
+$("#nav").innerHTML=NAV.map(n=>`<a href="#/${n[0]=="berita"?"berita":n[0]}">${n[1]}</a>`).join("");
+$("#fl").innerHTML=NAV.slice(1,7).map(n=>`<a href="#/${n[0]}">${n[1]}</a>`).join(" · ")+` · <a href="#/layanan">Layanan</a>`;
+document.addEventListener("click",e=>{const b=e.target.closest("[data-fav]");if(!b)return;const id=b.dataset.fav;fav=fav.includes(id)?fav.filter(x=>x!=id):[...fav,id];saveFav();route()});
+$("#th").onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"};
+const tp=$("#top");tp.onclick=()=>scrollTo(0,0);addEventListener("scroll",()=>tp.style.display=scrollY>400?"block":"none");
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
